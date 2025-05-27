@@ -1,0 +1,59 @@
+@media(max-width: 500px) {
+    #main {
+        max-width: 80%;
+    }
+
+    #columnForm {
+        label {
+            font-weight: 700;
+            color: $label-color;
+            font-size: 12px;
+            letter-spacing: 4px;
+
+
+            input::-webkit-input-placeholder {
+                font-size: 12px;
+    
+            }
+
+            input {
+                display: block;
+                outline: none;
+                border: 1px solid $input-outline;
+                border-radius: 5px;
+                width: 50%;
+                padding: 15px 10px;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    #dataInput {
+        align-items: center;
+
+        span {
+            margin-top: 5px;
+            font-size: 10px;
+        }
+    }
+
+    #dataOutput {
+        ul {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    #button {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 55px;
+        height: 55px;
+
+        img {
+            width: 25px;
+        }
+    }
+}
