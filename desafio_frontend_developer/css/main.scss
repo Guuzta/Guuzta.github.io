@@ -1,0 +1,334 @@
+@import 'default';
+@import 'variables';
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    height: 65vh;
+    background-image: url('../img/bg_image_header.png');
+    background-repeat: no-repeat;
+    
+    h1 + p {
+        margin: 40px 0;
+    }
+
+    .navigationButtons {
+       
+        margin-bottom: 80px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: 0 30px;
+                padding: 14px 30px;
+                background-color: $btnColors;
+
+                
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    color: $primary-color;
+                    
+                }
+            }
+        }
+    }
+}
+
+.registration {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 80px auto;
+
+    .information {
+        width: 50%;
+
+        h2 {
+            color: $primary-color;
+            font-weight: 400;
+        }
+
+        p {
+            color: $primary-color;
+            margin: 40px 0;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        
+        label {
+            margin: 10px 0;
+
+            input {
+                width: 100%;
+                padding: 10px 0;
+
+                &.error {
+                    border: 1px solid red;
+                }
+
+                &.error + span {
+                    margin-top: 10px;
+                    color: red;
+                    font-style: italic;
+                    font-weight: lighter;
+                    font-size: 13px;
+                }
+            }
+
+            span {
+                display: block;
+                color: $primary-color;
+            }
+
+            span:first-child {
+                margin-bottom: 10px;
+            }
+
+            .checkbox {
+                display: flex;
+                width: fit-content;
+
+                &.error {
+
+                    span {
+                        color: red;
+                    }
+                }
+                
+
+                input {
+                    margin-right: 5px;
+                    
+                }
+
+                span {
+                    margin-right: 30px;
+                }
+
+               
+            }
+
+            .checkbox + span {
+                margin-top: 10px;
+                color: red;
+                font-style: italic;
+                font-weight: lighter;
+                font-size: 13px;
+            }
+           
+        }
+
+
+        button {
+            margin-top: 10px;
+            padding: 10px 0;
+            background-color: $btnColors;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button + span{
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+.products {
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+
+    h3 {
+        color: $secondary-color;
+    }
+
+    .box {
+        
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: start;
+        
+        .product {
+            margin: 20px;
+            width: 20%;
+
+            .productImage {
+                border: 1px solid $primary-color;
+                border-radius: 8px;
+                
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                padding: 25px;
+            }
+            
+
+            h4 {
+                margin: 15px 0;
+                color: $primary-color;
+                font-weight: 400;
+            }
+
+            p {
+                color: $primary-color;
+            }
+
+            ul {
+                margin: 15px 0;
+                color: $primary-color;
+
+                li:nth-child(2) {
+                    margin: 10px 0;
+                    color: $secondary-color;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+
+            button {
+                width: 100%;
+                padding: 10px 0;
+                background-color: $btnColors;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }   
+    }
+
+    .box + button {
+        margin-top: 70px;
+        padding: 10px 0;
+        width: 300px;
+        background-color: $btnColors;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        font-size: 15px;
+        cursor: pointer;
+        
+    }
+
+ 
+}
+
+.sharing {
+
+    color: $primary-color;
+    
+    h3 {
+        text-align: center;
+        color: $secondary-color;
+    }
+
+    p {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .box {
+            display: flex;
+        }
+
+        label {
+
+            margin: 0 30px;
+           
+            span {
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            
+
+            input {
+                padding: 10px 0;
+                border-width: 30%;
+
+                &.error {
+                    border: 1px solid red;
+                }
+
+                &.error + span {
+                    margin-top: 10px;
+                    color: red;
+                    font-style: italic;
+                    font-weight: lighter;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        button {
+            padding: 10px 0;
+            width: 300px;
+            margin-top: 70px;
+            padding: 10px 50px;
+            background-color: #ffffff;
+            color: #888888;
+            border: 1px solid #888888;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button + span {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+footer {
+    height: 35vh;
+    background-image: url('../img/bg_image_footer.png');
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    
+    span:first-child {
+        margin-top: 120px;
+    }
+
+    span {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 10px;
+        text-align: center
+    }
+}
+
+@import 'mobile';
