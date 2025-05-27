@@ -1,0 +1,234 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+nav ul.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #263238;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul.menu li {
+  margin: 0;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+nav ul.menu li a:hover {
+  background-color: #37474F;
+}
+
+nav ul.menu .sair {
+  margin-left: auto;
+}
+
+nav ul.menu .sair a {
+  background-color: #e53935;
+  color: white;
+}
+
+nav ul.menu .sair a:hover {
+  background-color: #c62828;
+}
+
+.menu a.ativo {
+  background-color: #FF5722;
+  color: white;
+  font-weight: bold;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.produto {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.produto img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  margin: 10px 0 8px;
+  color: #263238;
+  font-size: 18px;
+}
+
+.produto small {
+  color: #757575;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.produto .preco {
+  font-weight: bold;
+  color: #FF5722;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.produto .remover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #e53935;
+  background: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.produto .remover:hover {
+  background-color: #ffebee;
+}
+
+.estoque-wrapper {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.estoque-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.estoque-input input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f9f9f9;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.estoque-input input:focus {
+  border-color: #FF5722;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.25);
+  background-color: white;
+}
+
+.btn-salvar {
+  background-color: #FF5722;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-salvar:hover {
+  background-color: #E64A19;
+}
+
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #263238;
+}
+
+.container input {
+  width: 90%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.container input:focus {
+  border-color: #FF5722;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.container button {
+  background-color: #FF5722;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #E64A19;
+}
+
+.container .criar-conta {
+  display: inline-block;
+  margin-top: 15px;
+  color: #FF5722;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.container .criar-conta:hover {
+  text-decoration: underline;
+}

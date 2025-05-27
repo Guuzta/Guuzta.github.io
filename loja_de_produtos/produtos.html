@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Produtos</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="#" onclick="filtrarProdutos('todos')" class="ativo">Todos</a></li>
+        <li><a href="#" onclick="filtrarProdutos('politrizes')">Politrizes</a></li>
+        <li><a href="#" onclick="filtrarProdutos('furadeiras')">Furadeiras</a></li>
+        <li><a href="#" onclick="filtrarProdutos('parafusadeiras')">Parafusadeiras</a></li>
+        <li><a href="#" onclick="filtrarProdutos('serras')">Serras</a></li>
+        <li><a href="#" onclick="filtrarProdutos('outros')">Outros</a></li>
+        <li class="sair"><a href="index.html">Sair</a></li>
+    </ul>
+</nav>
+
+<div class="produtos">
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="https://img.lojadomecanico.com.br/256/21/227/127610/1671106469433.JPG" alt="Produto 2"/>
+        <h3>Politriz Angular</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Ideal para polimento profissional</small>
+        </div>
+        <p class="preco">R$ 79,90</p>
+    </div>
+
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="data:image/webp;base64,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"
+             alt="Produto 3"/>
+        <h3>Furadeira de Impacto</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Potente para uso em alvenaria</small>
+        </div>
+        <p class="preco">R$ 119,90</p>
+    </div>
+
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="https://th.bing.com/th/id/R.41a0e9845f1ca2620a42dd9ff2bda302?rik=LswHmFWHFuwLjQ&riu=http%3a%2f%2fwww.dutramaquinas.com.br%2fview%2fimg%2fprodutos%2fzoom%2f38953_furadeira_parafusadeira_eletrica_encaixe_de_3_8_280_watts_velocidade_variavel_e_reversivel_fpv300.jpg&ehk=rRuN4SW%2fOyc8Al1Kzk5Rk1Js%2fGuWpdr9XvrhmRbZd7Y%3d&risl=&pid=ImgRaw&r=0"
+             alt="Produto 4"/>
+        <h3>Parafusadeira Elétrica</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Compacta e leve para montagem</small>
+        </div>
+        <p class="preco">R$ 89,90</p>
+    </div>
+
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.c3He6vWzJYkzEM0gjz7nFgHaHa?cb=iwp1&rs=1&pid=ImgDetMain"
+             alt="Produto 5"/>
+        <h3>Lixadeira Orbital</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Acabamento suave em madeira</small>
+        </div>
+        <p class="preco">R$ 74,90</p>
+    </div>
+
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="https://http2.mlstatic.com/compressor-de-ar-50-litros-super-versatil-motomil-mam-D_NQ_NP_823403-MLB31004268871_062019-F.jpg"
+             alt="Produto 6"/>
+        <h3>Compressor de Ar 50L</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Uso geral em oficinas</small>
+        </div>
+        <p class="preco">R$ 399,90</p>
+    </div>
+
+    <div class="produto">
+        <span class="remover" onclick="this.parentElement.remove()">🗑️</span>
+        <img src="https://th.bing.com/th/id/R.5fb6d29569b56166b9a07ea7b4a78c7c?rik=g08rNv7Rbb7Ddg&pid=ImgRaw&r=0"
+             alt="Produto 7"/>
+        <h3>Serra Mármore</h3>
+        <div class="estoque-wrapper">
+            <div class="estoque-input">
+                <input value="10" type="text" placeholder="Estoque"/>
+                <a class="btn-salvar" title="Salvar">💾</a>
+            </div>
+            <small>Para cortes em cerâmica e pedras</small>
+        </div>
+        <p class="preco">R$ 139,90</p>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
